@@ -10,10 +10,6 @@
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if(list1 == null) {
-            System.out.println("HI");
-        }
-
         if(list1 == null && list2 == null) {
             return null;
         }
@@ -36,16 +32,12 @@ class Solution {
         ListNode lastNode = ans; // 임시 노드
 
         // curr1 또는 curr2이 없을 때까지 반복
-        boolean isList1End = false;
-        boolean isList2End = false;
         while(true){
             if(currNode1 == null) {
-                isList1End = true;
                 lastNode.next = currNode2;
                 break;
             }
             if(currNode2 == null) {
-                isList1End = true;
                 lastNode.next = currNode1;
                 break;
             }
